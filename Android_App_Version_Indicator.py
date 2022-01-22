@@ -71,10 +71,19 @@ for apk_name in all_apps:
 	execute_cmd(execute,"dummy")
 	file = open(output_txt_path)
 	file_content = file.read()
-	package_name=re.search(r"name='(.*?)' versionCode",file_content).group(1)
-	version_code=re.search(r"versionCode='([\d.]+)",file_content).group(1)
+	try:
+		package_name=re.search(r"name='(.*?)' versionCode",file_content).group(1)
+	except AttributeError:
+		package_name=re.search(r"name='(.*?)' versionCode",file_content)
+	try:
+		version_code=re.search(r"versionCode='([\d.]+)",file_content).group(1)
+	except AttributeError:
+		version_code=re.search(r"versionCode='([\d.]+)",file_content)
 	found1 = bool(version_code)
-	version_name=re.search(r"versionName='([\d.]+)",file_content).group(1)
+	try:
+		version_name=re.search(r"versionName='([\d.]+)",file_content).group(1)
+	except AttributeError:
+		version_name=re.search(r"versionName='([\d.]+)",file_content)
 	found2 = bool(version_name)
 	try:
 		min_sdk_version=re.search(r"sdkVersion:'([\d.]+)",file_content).group(1)
