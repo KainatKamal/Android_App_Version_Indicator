@@ -3,6 +3,7 @@ This script extracts the below details of multiple APKs at once and stores the i
 - package name
 - version code
 - version name
+- minSDK version
 
 ## Requirements:
 - Windows 10
