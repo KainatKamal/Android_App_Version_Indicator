@@ -14,7 +14,7 @@ This script extracts the below details of multiple APKs at once and stores them 
 Install the python modules using the below command:<br/>
 **pip install xlsxwriter**
 
-## Extractor script usage:
+## Usage:
 1. Run the script - **python Android_App_Version_Indicator.py**
 2. When prompted enter the path of the folder where APKs are present.
 3. The excel will be present in the output folder with package name & version details of the APKs
