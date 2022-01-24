@@ -1,5 +1,5 @@
 # Android_App_Version_Indicator
-This script extracts the below details of multiple APKs at once and stores them information in an excel.
+This script extracts the below details of multiple APKs at once and stores the information in an excel.
 - package name
 - version code
 - version name
